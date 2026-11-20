@@ -1,0 +1,521 @@
+{
+  "name": "Tour",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "T\u00ean tour"
+    },
+    "slug": {
+      "type": "string",
+      "title": "\u0110\u01b0\u1eddng d\u1eabn"
+    },
+    "tour_code": {
+      "type": "string",
+      "title": "M\u00e3 tour"
+    },
+    "destination": {
+      "type": "string",
+      "title": "\u0110i\u1ec3m \u0111\u1ebfn"
+    },
+    "region": {
+      "type": "string",
+      "title": "V\u00f9ng mi\u1ec1n",
+      "enum": [
+        "Mi\u1ec1n B\u1eafc",
+        "Mi\u1ec1n Trung",
+        "Mi\u1ec1n Nam",
+        "Qu\u1ed1c t\u1ebf"
+      ],
+      "enumColors": [
+        "blue",
+        "purple",
+        "green",
+        "pink"
+      ]
+    },
+    "area": {
+      "type": "string",
+      "title": "Khu v\u1ef1c (tour qu\u1ed1c t\u1ebf)",
+      "enum": [
+        "\u0110\u00f4ng B\u1eafc \u00c1",
+        "\u0110\u00f4ng Nam \u00c1",
+        "Ch\u00e2u \u00c2u",
+        "Ch\u00e2u M\u1ef9",
+        "Ch\u00e2u \u00dac",
+        "Trung \u0110\u00f4ng"
+      ],
+      "enumColors": [
+        "blue",
+        "green",
+        "purple",
+        "yellow",
+        "pink",
+        "gray"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "title": "Ph\u1ea1m vi",
+      "enum": [
+        "domestic",
+        "international"
+      ],
+      "enumColors": [
+        "blue",
+        "purple"
+      ]
+    },
+    "category": {
+      "type": "string",
+      "title": "Danh m\u1ee5c",
+      "enum": [
+        "Tour trong n\u01b0\u1edbc",
+        "Tour qu\u1ed1c t\u1ebf",
+        "Ngh\u1ec9 d\u01b0\u1ee1ng",
+        "Kh\u00e1m ph\u00e1"
+      ],
+      "enumColors": [
+        "blue",
+        "purple",
+        "green",
+        "yellow"
+      ]
+    },
+    "theme_tags": {
+      "type": "array",
+      "title": "Ch\u1ee7 \u0111\u1ec1",
+      "items": {
+        "type": "string"
+      }
+    },
+    "duration": {
+      "type": "string",
+      "title": "Th\u1eddi gian (VD: 3 ng\u00e0y 2 \u0111\u00eam)"
+    },
+    "transport": {
+      "type": "string",
+      "title": "Ph\u01b0\u01a1ng ti\u1ec7n"
+    },
+    "duration_days": {
+      "type": "number",
+      "title": "S\u1ed1 ng\u00e0y"
+    },
+    "duration_nights": {
+      "type": "number",
+      "title": "S\u1ed1 \u0111\u00eam"
+    },
+    "min_pax": {
+      "type": "number",
+      "title": "S\u1ed1 kh\u00e1ch t\u1ed1i thi\u1ec3u"
+    },
+    "max_pax": {
+      "type": "number",
+      "title": "S\u1ed1 kh\u00e1ch t\u1ed1i \u0111a"
+    },
+    "price_adult": {
+      "type": "number",
+      "title": "Gi\u00e1 ng\u01b0\u1eddi l\u1edbn (VND)"
+    },
+    "original_price": {
+      "type": "number",
+      "title": "Gi\u00e1 ni\u00eam y\u1ebft ng\u01b0\u1eddi l\u1edbn (VND)"
+    },
+    "price_child": {
+      "type": "number",
+      "title": "Gi\u00e1 tr\u1ebb em (VND)"
+    },
+    "price_infant": {
+      "type": "number",
+      "title": "Gi\u00e1 em b\u00e9 (VND)"
+    },
+    "price_single_supplement": {
+      "type": "number",
+      "title": "Ph\u1ee5 thu ph\u00f2ng \u0111\u01a1n (VND)"
+    },
+    "price_note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa gi\u00e1 ng\u01b0\u1eddi l\u1edbn"
+    },
+    "child_age_from": {
+      "type": "number",
+      "title": "Tu\u1ed5i tr\u1ebb em t\u1eeb"
+    },
+    "child_age_to": {
+      "type": "number",
+      "title": "Tu\u1ed5i tr\u1ebb em \u0111\u1ebfn"
+    },
+    "infant_age_max": {
+      "type": "number",
+      "title": "Tu\u1ed5i em b\u00e9 (d\u01b0\u1edbi)"
+    },
+    "child_note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa tr\u1ebb em (VD: ng\u1ee7 chung ph\u00f2ng v\u1edbi b\u1ed1 m\u1eb9)"
+    },
+    "infant_price_note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa gi\u00e1 em b\u00e9"
+    },
+    "child_price_note": {
+      "type": "string",
+      "title": "Ch\u00fa th\u00edch gi\u00e1 tr\u1ebb em (d\u1eef li\u1ec7u c\u0169)"
+    },
+    "cost_adult": {
+      "type": "number",
+      "title": "Chi ph\u00ed ng\u01b0\u1eddi l\u1edbn (VND)"
+    },
+    "cost_child": {
+      "type": "number",
+      "title": "Chi ph\u00ed tr\u1ebb em (VND)"
+    },
+    "cost_infant": {
+      "type": "number",
+      "title": "Chi ph\u00ed em b\u00e9 (VND)"
+    },
+    "discount_percent": {
+      "type": "number",
+      "title": "Gi\u1ea3m gi\u00e1 (%)"
+    },
+    "discount_from": {
+      "type": "string",
+      "title": "Gi\u1ea3m gi\u00e1 t\u1eeb ng\u00e0y (YYYY-MM-DD)"
+    },
+    "discount_to": {
+      "type": "string",
+      "title": "Gi\u1ea3m gi\u00e1 \u0111\u1ebfn ng\u00e0y (YYYY-MM-DD)"
+    },
+    "surcharges": {
+      "type": "array",
+      "title": "Ph\u1ee5 thu",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "N\u1ed9i dung"
+          },
+          "amount": {
+            "type": "number",
+            "title": "S\u1ed1 ti\u1ec1n (VND)"
+          },
+          "unit": {
+            "type": "string",
+            "title": "C\u00e1ch t\u00ednh",
+            "enum": [
+              "M\u1ed7i kh\u00e1ch",
+              "M\u1ed7i tr\u1ebb em",
+              "To\u00e0n \u0111o\u00e0n"
+            ],
+            "enumColors": [
+              "blue",
+              "yellow",
+              "purple"
+            ]
+          }
+        }
+      }
+    },
+    "surcharge_periods": {
+      "type": "array",
+      "title": "Ph\u1ee5 thu theo kho\u1ea3ng ng\u00e0y",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "N\u1ed9i dung"
+          },
+          "from_date": {
+            "type": "string",
+            "title": "T\u1eeb ng\u00e0y (YYYY-MM-DD)"
+          },
+          "to_date": {
+            "type": "string",
+            "title": "\u0110\u1ebfn ng\u00e0y (YYYY-MM-DD)"
+          },
+          "amount": {
+            "type": "number",
+            "title": "S\u1ed1 ti\u1ec1n (VND)"
+          },
+          "unit": {
+            "type": "string",
+            "title": "C\u00e1ch t\u00ednh",
+            "enum": [
+              "M\u1ed7i kh\u00e1ch",
+              "M\u1ed7i tr\u1ebb em",
+              "To\u00e0n \u0111o\u00e0n"
+            ],
+            "enumColors": [
+              "blue",
+              "yellow",
+              "purple"
+            ]
+          }
+        }
+      }
+    },
+    "cancellation_policy": {
+      "type": "array",
+      "title": "Ch\u00ednh s\u00e1ch h\u1ee7y",
+      "items": {
+        "type": "object",
+        "properties": {
+          "days_before": {
+            "type": "number",
+            "title": "H\u1ee7y tr\u01b0\u1edbc (ng\u00e0y)"
+          },
+          "fee_percent": {
+            "type": "number",
+            "title": "Ph\u00ed h\u1ee7y (%)"
+          },
+          "note": {
+            "type": "string",
+            "title": "Ghi ch\u00fa"
+          }
+        }
+      }
+    },
+    "required_documents": {
+      "type": "array",
+      "title": "Gi\u1ea5y t\u1edd c\u1ea7n thi\u1ebft",
+      "items": {
+        "type": "string"
+      }
+    },
+    "seo_title": {
+      "type": "string",
+      "title": "SEO title"
+    },
+    "seo_description": {
+      "type": "string",
+      "title": "SEO description"
+    },
+    "seo_keywords": {
+      "type": "string",
+      "title": "SEO keywords"
+    },
+    "status": {
+      "type": "string",
+      "title": "Tr\u1ea1ng th\u00e1i b\u00e1n",
+      "enum": [
+        "Nh\u00e1p",
+        "\u0110ang b\u00e1n",
+        "T\u1ea1m d\u1eebng",
+        "H\u1ebft ch\u1ed7"
+      ],
+      "enumColors": [
+        "gray",
+        "green",
+        "yellow",
+        "red"
+      ],
+      "default": "\u0110ang b\u00e1n"
+    },
+    "archived": {
+      "type": "boolean",
+      "title": "\u0110\u00e3 l\u01b0u tr\u1eef",
+      "default": false
+    },
+    "cover_image": {
+      "type": "string",
+      "title": "\u1ea2nh \u0111\u1ea1i di\u1ec7n"
+    },
+    "gallery_images": {
+      "type": "array",
+      "title": "Th\u01b0 vi\u1ec7n \u1ea3nh",
+      "items": {
+        "type": "string"
+      }
+    },
+    "itinerary_images": {
+      "type": "array",
+      "title": "\u1ea2nh \u0111i\u1ec3m \u0111\u1ebfn trong l\u1ecbch tr\u00ecnh (6 \u1ea3nh)",
+      "items": {
+        "type": "string"
+      }
+    },
+    "short_description": {
+      "type": "string",
+      "title": "M\u00f4 t\u1ea3 ng\u1eafn"
+    },
+    "highlights": {
+      "type": "array",
+      "title": "\u0110i\u1ec3m n\u1ed5i b\u1eadt",
+      "items": {
+        "type": "string"
+      }
+    },
+    "route": {
+      "type": "array",
+      "title": "L\u1ecbch tr\u00ecnh",
+      "items": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "number",
+            "title": "Ng\u00e0y"
+          },
+          "title": {
+            "type": "string",
+            "title": "Ti\u00eau \u0111\u1ec1"
+          },
+          "description": {
+            "type": "string",
+            "title": "M\u00f4 t\u1ea3"
+          },
+          "image": {
+            "type": "string",
+            "title": "\u1ea2nh \u0111\u1ecba \u0111i\u1ec3m"
+          },
+          "transport": {
+            "type": "string",
+            "title": "Ph\u01b0\u01a1ng ti\u1ec7n"
+          },
+          "meals": {
+            "type": "array",
+            "title": "B\u1eefa \u0103n",
+            "items": {
+              "type": "string"
+            }
+          },
+          "hotel": {
+            "type": "string",
+            "title": "N\u01a1i ngh\u1ec9"
+          }
+        }
+      }
+    },
+    "included_services": {
+      "type": "array",
+      "title": "D\u1ecbch v\u1ee5 bao g\u1ed3m",
+      "items": {
+        "type": "string"
+      }
+    },
+    "excluded_services": {
+      "type": "array",
+      "title": "Kh\u00f4ng bao g\u1ed3m",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "title": "L\u01b0u \u00fd",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes_groups": {
+      "type": "array",
+      "title": "L\u01b0u \u00fd theo nh\u00f3m",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group": {
+            "type": "string",
+            "title": "Nh\u00f3m",
+            "enum": [
+              "Gi\u1ea5y t\u1edd v\u00e0 visa",
+              "H\u00e0nh l\u00fd",
+              "Tr\u1ebb em",
+              "Th\u1eddi ti\u1ebft v\u00e0 trang ph\u1ee5c",
+              "Kh\u00e1c"
+            ],
+            "enumColors": [
+              "blue",
+              "yellow",
+              "green",
+              "purple",
+              "gray"
+            ]
+          },
+          "items": {
+            "type": "array",
+            "title": "N\u1ed9i dung",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "departure_point": {
+      "type": "string",
+      "title": "\u0110i\u1ec3m kh\u1edfi h\u00e0nh"
+    },
+    "departure_points": {
+      "type": "array",
+      "title": "C\u00e1c \u0111i\u1ec3m kh\u1edfi h\u00e0nh",
+      "items": {
+        "type": "string"
+      }
+    },
+    "departure_dates": {
+      "type": "array",
+      "title": "Ng\u00e0y kh\u1edfi h\u00e0nh d\u1ef1 ki\u1ebfn (YYYY-MM-DD)",
+      "items": {
+        "type": "string"
+      }
+    },
+    "departure_city": {
+      "type": "string",
+      "title": "\u0110i\u1ec3m kh\u1edfi h\u00e0nh (chu\u1ea9n ho\u00e1)"
+    },
+    "suitable_for": {
+      "type": "array",
+      "title": "Ph\u00f9 h\u1ee3p v\u1edbi",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_featured": {
+      "type": "boolean",
+      "title": "Tour n\u1ed5i b\u1eadt"
+    },
+    "rating": {
+      "type": "number",
+      "title": "\u0110i\u1ec3m \u0111\u00e1nh gi\u00e1"
+    },
+    "review_count": {
+      "type": "number",
+      "title": "S\u1ed1 l\u01b0\u1ee3t \u0111\u00e1nh gi\u00e1"
+    },
+    "rating_visible": {
+      "type": "boolean",
+      "title": "Hi\u1ec7n \u0111i\u1ec3m \u0111\u00e1nh gi\u00e1 tr\u00ean trang kh\u00e1ch",
+      "default": true
+    },
+    "view_count": {
+      "type": "number",
+      "title": "L\u01b0\u1ee3t xem"
+    },
+    "seats_total": {
+      "type": "number",
+      "title": "S\u1ed1 ch\u1ed7 m\u1ed7i chuy\u1ebfn"
+    }
+  },
+  "required": [
+    "title",
+    "slug"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "MediaAsset",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "T\u00ean \u1ea3nh"
+    },
+    "url": {
+      "type": "string",
+      "title": "\u0110\u01b0\u1eddng d\u1eabn \u1ea3nh"
+    },
+    "alt": {
+      "type": "string",
+      "title": "M\u00f4 t\u1ea3 \u1ea3nh (alt)"
+    },
+    "size_bytes": {
+      "type": "number",
+      "title": "Dung l\u01b0\u1ee3ng (bytes)"
+    },
+    "used_count": {
+      "type": "number",
+      "title": "S\u1ed1 l\u1ea7n d\u00f9ng",
+      "default": 0
+    },
+    "note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa"
+    }
+  },
+  "required": [
+    "url"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

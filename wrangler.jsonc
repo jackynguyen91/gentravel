@@ -1,0 +1,29 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Tên Worker: PHẢI trùng đúng tên Worker bạn tạo trên Cloudflare (Workers & Pages).
+  "name": "gentravel",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "src/server.js",
+  "observability": { "enabled": true },
+
+  // Cơ sở dữ liệu D1. Tạo bằng:  npx wrangler d1 create gentravel-db
+  // rồi dán "database_id" lệnh in ra vào dòng bên dưới.
+  "d1_databases": [{ "binding": "DB", "database_name": "gentravel-db", "database_id": "2eb34910-2a93-4aa2-a70e-19d3365fa190" }],
+
+  // Kho file (ảnh tour, chứng từ). Tạo bằng:  npx wrangler r2 bucket create gentravel-files
+  "r2_buckets": [{ "binding": "FILES", "bucket_name": "gentravel-files" }],
+
+  // Workers AI (gợi ý SEO cho bài viết). Không bắt buộc; xoá khối này nếu không dùng.
+  "ai": { "binding": "AI" },
+
+  "vars": {
+    // Email được tự động làm quản trị viên khi đăng ký (cách nhau bằng dấu phẩy). BẮT BUỘC điền email của bạn.
+    "ADMIN_EMAILS": "nguyenduc201191@gmail.com",
+    // Người gửi email hệ thống (cần Resend và tên miền đã xác minh). Để trống nếu chưa dùng email.
+    "MAIL_FROM": "",
+    "SITE_NAME": "GenTravel"
+    // Gói Free: nếu đăng nhập báo lỗi 1102/quá thời gian CPU, thêm dòng  "PBKDF2_ITERATIONS": "20000"  (hoặc nâng lên Workers Paid, khuyến nghị).
+  }
+  // Bí mật KHÔNG ghi ở đây, đặt trên Cloudflare:  JWT_SECRET (bắt buộc), RESEND_API_KEY (tuỳ chọn).
+}

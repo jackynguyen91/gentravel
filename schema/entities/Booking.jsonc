@@ -1,0 +1,327 @@
+{
+  "name": "Booking",
+  "type": "object",
+  "properties": {
+    "booking_code": {
+      "type": "string",
+      "title": "M\u00e3 \u0111\u1eb7t ch\u1ed7"
+    },
+    "booking_date": {
+      "type": "string",
+      "title": "Ng\u00e0y \u0111\u1eb7t (ISO)"
+    },
+    "tour_id": {
+      "type": "string",
+      "title": "M\u00e3 tour"
+    },
+    "departure_id": {
+      "type": "string",
+      "title": "M\u00e3 k\u1ef3 kh\u1edfi h\u00e0nh"
+    },
+    "tour_title": {
+      "type": "string",
+      "title": "T\u00ean tour"
+    },
+    "customer_id": {
+      "type": "string",
+      "title": "M\u00e3 kh\u00e1ch h\u00e0ng"
+    },
+    "customer_name": {
+      "type": "string",
+      "title": "H\u1ecd t\u00ean kh\u00e1ch"
+    },
+    "customer_phone": {
+      "type": "string",
+      "title": "S\u1ed1 \u0111i\u1ec7n tho\u1ea1i"
+    },
+    "customer_email": {
+      "type": "string",
+      "title": "Email"
+    },
+    "departure_date": {
+      "type": "string",
+      "title": "Ng\u00e0y kh\u1edfi h\u00e0nh"
+    },
+    "adults_count": {
+      "type": "number",
+      "title": "S\u1ed1 ng\u01b0\u1eddi l\u1edbn"
+    },
+    "children_count": {
+      "type": "number",
+      "title": "S\u1ed1 tr\u1ebb em"
+    },
+    "infants_count": {
+      "type": "number",
+      "title": "S\u1ed1 em b\u00e9",
+      "default": 0
+    },
+    "passengers": {
+      "type": "array",
+      "title": "Danh s\u00e1ch h\u00e0nh kh\u00e1ch",
+      "items": {
+        "type": "object",
+        "properties": {
+          "full_name": {
+            "type": "string",
+            "title": "H\u1ecd t\u00ean"
+          },
+          "type": {
+            "type": "string",
+            "title": "Lo\u1ea1i",
+            "enum": [
+              "Ng\u01b0\u1eddi l\u1edbn",
+              "Tr\u1ebb em",
+              "Em b\u00e9"
+            ],
+            "enumColors": [
+              "blue",
+              "yellow",
+              "gray"
+            ]
+          },
+          "note": {
+            "type": "string",
+            "title": "Ghi ch\u00fa"
+          }
+        }
+      }
+    },
+    "total_price": {
+      "type": "number",
+      "title": "T\u1ed5ng ti\u1ec1n (VND)"
+    },
+    "unit_price_adult": {
+      "type": "number",
+      "title": "\u0110\u01a1n gi\u00e1 ng\u01b0\u1eddi l\u1edbn t\u1ea1i th\u1eddi \u0111i\u1ec3m \u0111\u1eb7t (VND)"
+    },
+    "unit_price_child": {
+      "type": "number",
+      "title": "\u0110\u01a1n gi\u00e1 tr\u1ebb em t\u1ea1i th\u1eddi \u0111i\u1ec3m \u0111\u1eb7t (VND)"
+    },
+    "unit_price_infant": {
+      "type": "number",
+      "title": "\u0110\u01a1n gi\u00e1 em b\u00e9 t\u1ea1i th\u1eddi \u0111i\u1ec3m \u0111\u1eb7t (VND)"
+    },
+    "discount_percent": {
+      "type": "number",
+      "title": "Gi\u1ea3m gi\u00e1 t\u1ea1i th\u1eddi \u0111i\u1ec3m \u0111\u1eb7t (%)"
+    },
+    "voucher_code": {
+      "type": "string",
+      "title": "M\u00e3 voucher / gi\u1ea3m gi\u00e1"
+    },
+    "paid_amount": {
+      "type": "number",
+      "title": "\u0110\u00e3 thu (VND)"
+    },
+    "special_requests": {
+      "type": "string",
+      "title": "Y\u00eau c\u1ea7u \u0111\u1eb7c bi\u1ec7t"
+    },
+    "customer_note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa c\u1ee7a kh\u00e1ch"
+    },
+    "channel": {
+      "type": "string",
+      "title": "Ngu\u1ed3n \u0111\u1eb7t",
+      "enum": [
+        "Website",
+        "Facebook",
+        "Zalo",
+        "Hotline",
+        "\u0110\u1ea1i l\u00fd",
+        "Walk-in",
+        "Tr\u1ef1c ti\u1ebfp",
+        "B\u00e0i vi\u1ebft"
+      ],
+      "enumColors": [
+        "blue",
+        "blue",
+        "green",
+        "yellow",
+        "purple",
+        "gray",
+        "gray",
+        "pink"
+      ],
+      "default": "Website"
+    },
+    "source_post": {
+      "type": "string",
+      "title": "B\u00e0i vi\u1ebft ngu\u1ed3n (\u0111\u01b0\u1eddng d\u1eabn)"
+    },
+    "source_post_title": {
+      "type": "string",
+      "title": "B\u00e0i vi\u1ebft ngu\u1ed3n"
+    },
+    "sale_owner": {
+      "type": "string",
+      "title": "Nh\u00e2n vi\u00ean ph\u1ee5 tr\u00e1ch"
+    },
+    "status": {
+      "type": "string",
+      "title": "Tr\u1ea1ng th\u00e1i",
+      "enum": [
+        "M\u1edbi",
+        "Ch\u1edd x\u00e1c nh\u1eadn",
+        "\u0110\u00e3 x\u00e1c nh\u1eadn",
+        "\u0110\u00e3 thanh to\u00e1n m\u1ed9t ph\u1ea7n",
+        "\u0110\u00e3 thanh to\u00e1n",
+        "Ho\u00e0n t\u1ea5t",
+        "\u0110\u00e3 h\u1ee7y",
+        "Ho\u00e0n ti\u1ec1n"
+      ],
+      "enumColors": [
+        "gray",
+        "yellow",
+        "blue",
+        "purple",
+        "green",
+        "green",
+        "red",
+        "pink"
+      ]
+    },
+    "cancellation_reason": {
+      "type": "string",
+      "title": "L\u00fd do h\u1ee7y"
+    },
+    "payment_status": {
+      "type": "string",
+      "title": "Tr\u1ea1ng th\u00e1i thanh to\u00e1n",
+      "enum": [
+        "Unpaid",
+        "Pending Verification",
+        "Partial",
+        "Paid"
+      ],
+      "enumColors": [
+        "yellow",
+        "blue",
+        "purple",
+        "green"
+      ],
+      "default": "Unpaid"
+    },
+    "internal_notes": {
+      "type": "array",
+      "title": "Ghi ch\u00fa n\u1ed9i b\u1ed9",
+      "items": {
+        "type": "object",
+        "properties": {
+          "at": {
+            "type": "string",
+            "title": "Th\u1eddi \u0111i\u1ec3m"
+          },
+          "author": {
+            "type": "string",
+            "title": "Ng\u01b0\u1eddi ghi"
+          },
+          "text": {
+            "type": "string",
+            "title": "N\u1ed9i dung"
+          }
+        }
+      }
+    },
+    "activities": {
+      "type": "array",
+      "title": "L\u1ecbch s\u1eed ho\u1ea1t \u0111\u1ed9ng",
+      "items": {
+        "type": "object",
+        "properties": {
+          "at": {
+            "type": "string",
+            "title": "Th\u1eddi \u0111i\u1ec3m"
+          },
+          "type": {
+            "type": "string",
+            "title": "Lo\u1ea1i"
+          },
+          "text": {
+            "type": "string",
+            "title": "N\u1ed9i dung"
+          },
+          "actor": {
+            "type": "string",
+            "title": "Ng\u01b0\u1eddi th\u1ef1c hi\u1ec7n"
+          },
+          "from": {
+            "type": "string",
+            "title": "T\u1eeb tr\u1ea1ng th\u00e1i"
+          },
+          "to": {
+            "type": "string",
+            "title": "Sang tr\u1ea1ng th\u00e1i"
+          }
+        }
+      }
+    },
+    "addons": {
+      "type": "array",
+      "title": "D\u1ecbch v\u1ee5 \u0111i k\u00e8m",
+      "items": {
+        "type": "object",
+        "properties": {
+          "service_id": {
+            "type": "string",
+            "title": "M\u00e3 d\u1ecbch v\u1ee5"
+          },
+          "service_title": {
+            "type": "string",
+            "title": "T\u00ean d\u1ecbch v\u1ee5"
+          },
+          "quantity": {
+            "type": "number",
+            "title": "S\u1ed1 l\u01b0\u1ee3ng"
+          },
+          "unit_price": {
+            "type": "number",
+            "title": "\u0110\u01a1n gi\u00e1 (VND)"
+          },
+          "amount": {
+            "type": "number",
+            "title": "Th\u00e0nh ti\u1ec1n (VND)"
+          }
+        }
+      }
+    },
+    "service_amount": {
+      "type": "number",
+      "title": "Ti\u1ec1n d\u1ecbch v\u1ee5 \u0111i k\u00e8m (VND)"
+    }
+  },
+  "required": [
+    "booking_code",
+    "tour_id",
+    "customer_name",
+    "customer_phone",
+    "status"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

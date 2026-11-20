@@ -1,0 +1,135 @@
+{
+  "name": "Passenger",
+  "type": "object",
+  "properties": {
+    "booking_id": {
+      "type": "string",
+      "title": "M\u00e3 \u0111\u1eb7t ch\u1ed7 n\u1ed9i b\u1ed9"
+    },
+    "booking_code": {
+      "type": "string",
+      "title": "M\u00e3 \u0111\u01a1n"
+    },
+    "tour_id": {
+      "type": "string",
+      "title": "M\u00e3 tour"
+    },
+    "passenger_no": {
+      "type": "number",
+      "title": "S\u1ed1 th\u1ee9 t\u1ef1"
+    },
+    "full_name": {
+      "type": "string",
+      "title": "H\u1ecd v\u00e0 t\u00ean"
+    },
+    "passenger_type": {
+      "type": "string",
+      "title": "Lo\u1ea1i h\u00e0nh kh\u00e1ch",
+      "enum": [
+        "Ng\u01b0\u1eddi l\u1edbn",
+        "Tr\u1ebb em",
+        "Em b\u00e9"
+      ],
+      "enumColors": [
+        "blue",
+        "yellow",
+        "gray"
+      ],
+      "default": "Ng\u01b0\u1eddi l\u1edbn"
+    },
+    "gender": {
+      "type": "string",
+      "title": "Gi\u1edbi t\u00ednh",
+      "enum": [
+        "Nam",
+        "N\u1eef",
+        "Kh\u00e1c"
+      ],
+      "enumColors": [
+        "blue",
+        "pink",
+        "gray"
+      ]
+    },
+    "birth_date": {
+      "type": "string",
+      "title": "Ng\u00e0y sinh (YYYY-MM-DD)"
+    },
+    "id_type": {
+      "type": "string",
+      "title": "Lo\u1ea1i gi\u1ea5y t\u1edd",
+      "enum": [
+        "CCCD",
+        "H\u1ed9 chi\u1ebfu",
+        "Gi\u1ea5y khai sinh",
+        "Kh\u00e1c"
+      ],
+      "enumColors": [
+        "blue",
+        "purple",
+        "green",
+        "gray"
+      ],
+      "default": "CCCD"
+    },
+    "id_number": {
+      "type": "string",
+      "title": "S\u1ed1 CCCD / h\u1ed9 chi\u1ebfu"
+    },
+    "id_issue_date": {
+      "type": "string",
+      "title": "Ng\u00e0y c\u1ea5p (YYYY-MM-DD)"
+    },
+    "id_issued_by": {
+      "type": "string",
+      "title": "N\u01a1i c\u1ea5p"
+    },
+    "id_expiry_date": {
+      "type": "string",
+      "title": "Ng\u00e0y h\u1ebft h\u1ea1n (YYYY-MM-DD)"
+    },
+    "nationality": {
+      "type": "string",
+      "title": "Qu\u1ed1c t\u1ecbch"
+    },
+    "phone": {
+      "type": "string",
+      "title": "\u0110i\u1ec7n tho\u1ea1i"
+    },
+    "note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa"
+    },
+    "updated_by": {
+      "type": "string",
+      "title": "Ng\u01b0\u1eddi c\u1eadp nh\u1eadt"
+    }
+  },
+  "required": [
+    "booking_id",
+    "full_name",
+    "passenger_type"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

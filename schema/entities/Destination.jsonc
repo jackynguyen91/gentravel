@@ -1,0 +1,68 @@
+{
+  "name": "Destination",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "T\u00ean \u0111i\u1ec3m \u0111\u1ebfn"
+    },
+    "slug": {
+      "type": "string",
+      "title": "\u0110\u01b0\u1eddng d\u1eabn"
+    },
+    "country": {
+      "type": "string",
+      "title": "Qu\u1ed1c gia"
+    },
+    "region": {
+      "type": "string",
+      "title": "V\u00f9ng mi\u1ec1n",
+      "enum": [
+        "Mi\u1ec1n B\u1eafc",
+        "Mi\u1ec1n Trung",
+        "Mi\u1ec1n Nam",
+        "Qu\u1ed1c t\u1ebf"
+      ],
+      "enumColors": [
+        "blue",
+        "purple",
+        "green",
+        "pink"
+      ]
+    },
+    "image": {
+      "type": "string",
+      "title": "\u1ea2nh \u0111\u1ea1i di\u1ec7n"
+    },
+    "description": {
+      "type": "string",
+      "title": "M\u00f4 t\u1ea3 ng\u1eafn"
+    },
+    "needs_review": {
+      "type": "boolean",
+      "title": "C\u1ea7n r\u00e0 so\u00e1t",
+      "default": false
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

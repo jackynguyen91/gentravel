@@ -1,0 +1,507 @@
+{
+  "name": "Service",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "T\u00ean d\u1ecbch v\u1ee5"
+    },
+    "slug": {
+      "type": "string",
+      "title": "\u0110\u01b0\u1eddng d\u1eabn"
+    },
+    "type": {
+      "type": "string",
+      "title": "Lo\u1ea1i d\u1ecbch v\u1ee5"
+    },
+    "summary": {
+      "type": "string",
+      "title": "M\u00f4 t\u1ea3 ng\u1eafn"
+    },
+    "description": {
+      "type": "string",
+      "title": "M\u00f4 t\u1ea3 chi ti\u1ebft"
+    },
+    "highlights": {
+      "type": "array",
+      "title": "\u0110i\u1ec3m n\u1ed5i b\u1eadt",
+      "items": {
+        "type": "string"
+      }
+    },
+    "image": {
+      "type": "string",
+      "title": "\u1ea2nh \u0111\u1ea1i di\u1ec7n"
+    },
+    "images": {
+      "type": "array",
+      "title": "Th\u01b0 vi\u1ec7n \u1ea3nh",
+      "items": {
+        "type": "string"
+      }
+    },
+    "destination": {
+      "type": "string",
+      "title": "\u0110i\u1ec3m \u0111\u1ebfn"
+    },
+    "destination_id": {
+      "type": "string",
+      "title": "M\u00e3 \u0111i\u1ec3m \u0111\u1ebfn"
+    },
+    "needs_review": {
+      "type": "boolean",
+      "title": "C\u1ea7n r\u00e0 so\u00e1t",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+      "title": "Tr\u1ea1ng th\u00e1i",
+      "enum": [
+        "\u0110ang hi\u1ec3n th\u1ecb",
+        "\u1ea8n",
+        "Nh\u00e1p",
+        "T\u1ea1m ng\u01b0ng/H\u1ebft h\u00e0ng"
+      ],
+      "enumColors": [
+        "green",
+        "gray",
+        "yellow",
+        "red"
+      ],
+      "default": "\u0110ang hi\u1ec3n th\u1ecb"
+    },
+    "is_active": {
+      "type": "boolean",
+      "title": "\u0110ang hi\u1ec3n th\u1ecb (d\u1eef li\u1ec7u c\u0169)",
+      "default": true
+    },
+    "archived": {
+      "type": "boolean",
+      "title": "\u0110\u00e3 l\u01b0u tr\u1eef",
+      "default": false
+    },
+    "sort_order": {
+      "type": "number",
+      "title": "Th\u1ee9 t\u1ef1 hi\u1ec3n th\u1ecb",
+      "default": 0
+    },
+    "pinned": {
+      "type": "boolean",
+      "title": "Ghim l\u00ean \u0111\u1ea7u",
+      "default": false
+    },
+    "view_count_30d": {
+      "type": "number",
+      "title": "L\u01b0\u1ee3t xem 30 ng\u00e0y",
+      "default": 0
+    },
+    "price": {
+      "type": "number",
+      "title": "Gi\u00e1 b\u00e1n (VND)"
+    },
+    "price_from": {
+      "type": "number",
+      "title": "Gi\u00e1 t\u1eeb (VND, d\u1eef li\u1ec7u c\u0169)"
+    },
+    "price_unit": {
+      "type": "string",
+      "title": "\u0110\u01a1n v\u1ecb gi\u00e1"
+    },
+    "price_kind": {
+      "type": "string",
+      "title": "Lo\u1ea1i gi\u00e1"
+    },
+    "price_includes_tax": {
+      "type": "boolean",
+      "title": "Gi\u00e1 \u0111\u00e3 g\u1ed3m thu\u1ebf ph\u00ed",
+      "default": true
+    },
+    "price_note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa gi\u00e1"
+    },
+    "price_needs_review": {
+      "type": "boolean",
+      "title": "Gi\u00e1 c\u1ea7n r\u00e0 so\u00e1t",
+      "default": false
+    },
+    "price_rules": {
+      "type": "array",
+      "title": "Quy t\u1eafc gi\u00e1 theo \u0111\u1ed1i t\u01b0\u1ee3ng",
+      "items": {
+        "type": "object",
+        "properties": {
+          "audience": {
+            "type": "string",
+            "title": "\u0110\u1ed1i t\u01b0\u1ee3ng",
+            "enum": [
+              "Ng\u01b0\u1eddi l\u1edbn",
+              "Tr\u1ebb em",
+              "Em b\u00e9",
+              "Ng\u01b0\u1eddi cao tu\u1ed5i"
+            ],
+            "enumColors": [
+              "blue",
+              "yellow",
+              "gray",
+              "purple"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "title": "C\u0103n c\u1ee9",
+            "enum": [
+              "\u0110\u1ed9 tu\u1ed5i",
+              "Chi\u1ec1u cao"
+            ],
+            "enumColors": [
+              "blue",
+              "green"
+            ]
+          },
+          "min_value": {
+            "type": "number",
+            "title": "T\u1eeb"
+          },
+          "max_value": {
+            "type": "number",
+            "title": "\u0110\u1ebfn"
+          },
+          "discount_percent": {
+            "type": "number",
+            "title": "M\u1ee9c gi\u1ea3m (%)"
+          },
+          "note": {
+            "type": "string",
+            "title": "Ghi ch\u00fa"
+          }
+        }
+      }
+    },
+    "seasonal_prices": {
+      "type": "array",
+      "title": "B\u1ea3ng gi\u00e1 theo kho\u1ea3ng ng\u00e0y",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "T\u00ean m\u00f9a / giai \u0111o\u1ea1n"
+          },
+          "from_date": {
+            "type": "string",
+            "title": "T\u1eeb ng\u00e0y (YYYY-MM-DD)"
+          },
+          "to_date": {
+            "type": "string",
+            "title": "\u0110\u1ebfn ng\u00e0y (YYYY-MM-DD)"
+          },
+          "price": {
+            "type": "number",
+            "title": "Gi\u00e1 (VND)"
+          }
+        }
+      }
+    },
+    "cost_price": {
+      "type": "number",
+      "title": "Gi\u00e1 nh\u1eadp (VND)"
+    },
+    "markup_percent": {
+      "type": "number",
+      "title": "Markup (%)"
+    },
+    "service_fee": {
+      "type": "number",
+      "title": "Ph\u00ed d\u1ecbch v\u1ee5 (VND)"
+    },
+    "supplier_id": {
+      "type": "string",
+      "title": "M\u00e3 nh\u00e0 cung c\u1ea5p"
+    },
+    "supplier_name": {
+      "type": "string",
+      "title": "Nh\u00e0 cung c\u1ea5p"
+    },
+    "flight": {
+      "type": "object",
+      "title": "Th\u00f4ng tin v\u00e9 m\u00e1y bay",
+      "properties": {
+        "scope": {
+          "type": "string",
+          "title": "Ph\u1ea1m vi",
+          "enum": [
+            "N\u1ed9i \u0111\u1ecba",
+            "Qu\u1ed1c t\u1ebf"
+          ],
+          "enumColors": [
+            "blue",
+            "purple"
+          ]
+        },
+        "airline": {
+          "type": "string",
+          "title": "H\u00e3ng bay"
+        },
+        "from_place": {
+          "type": "string",
+          "title": "\u0110i\u1ec3m \u0111i"
+        },
+        "to_place": {
+          "type": "string",
+          "title": "\u0110i\u1ec3m \u0111\u1ebfn"
+        },
+        "trip_type": {
+          "type": "string",
+          "title": "Lo\u1ea1i h\u00e0nh tr\u00ecnh",
+          "enum": [
+            "M\u1ed9t chi\u1ec1u",
+            "Kh\u1ee9 h\u1ed3i"
+          ],
+          "enumColors": [
+            "blue",
+            "green"
+          ]
+        },
+        "baggage_carry": {
+          "type": "string",
+          "title": "H\u00e0nh l\u00fd x\u00e1ch tay"
+        },
+        "baggage_checked": {
+          "type": "string",
+          "title": "H\u00e0nh l\u00fd k\u00fd g\u1eedi"
+        },
+        "change_policy": {
+          "type": "string",
+          "title": "Quy \u0111\u1ecbnh \u0111\u1ed5i / ho\u00e0n v\u00e9"
+        },
+        "price_by_date_note": {
+          "type": "string",
+          "title": "Ghi ch\u00fa gi\u00e1 thay \u0111\u1ed5i theo ng\u00e0y"
+        }
+      }
+    },
+    "ticket": {
+      "type": "object",
+      "title": "Th\u00f4ng tin v\u00e9 tham quan",
+      "properties": {
+        "venue": {
+          "type": "string",
+          "title": "\u0110\u1ecba \u0111i\u1ec3m"
+        },
+        "ticket_type": {
+          "type": "string",
+          "title": "Lo\u1ea1i v\u00e9"
+        },
+        "audience": {
+          "type": "string",
+          "title": "\u0110\u1ed1i t\u01b0\u1ee3ng \u00e1p d\u1ee5ng"
+        },
+        "open_hours": {
+          "type": "string",
+          "title": "Gi\u1edd m\u1edf c\u1eeda"
+        },
+        "validity": {
+          "type": "string",
+          "title": "H\u1ea1n s\u1eed d\u1ee5ng v\u00e9"
+        },
+        "included": {
+          "type": "array",
+          "title": "Bao g\u1ed3m",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excluded": {
+          "type": "array",
+          "title": "Kh\u00f4ng bao g\u1ed3m",
+          "items": {
+            "type": "string"
+          }
+        },
+        "refund_policy": {
+          "type": "string",
+          "title": "Ch\u00ednh s\u00e1ch \u0111\u1ed5i / ho\u00e0n"
+        },
+        "delivery": {
+          "type": "string",
+          "title": "H\u00ecnh th\u1ee9c nh\u1eadn v\u00e9",
+          "enum": [
+            "E-ticket",
+            "Nh\u1eadn t\u1ea1i qu\u1ea7y"
+          ],
+          "enumColors": [
+            "blue",
+            "purple"
+          ]
+        }
+      }
+    },
+    "hotel": {
+      "type": "object",
+      "title": "Th\u00f4ng tin kh\u00e1ch s\u1ea1n",
+      "properties": {
+        "stars": {
+          "type": "number",
+          "title": "H\u1ea1ng sao"
+        },
+        "address": {
+          "type": "string",
+          "title": "\u0110\u1ecba ch\u1ec9"
+        },
+        "area": {
+          "type": "string",
+          "title": "Khu v\u1ef1c"
+        },
+        "amenities": {
+          "type": "array",
+          "title": "Ti\u1ec7n nghi",
+          "items": {
+            "type": "string"
+          }
+        },
+        "room_types": {
+          "type": "array",
+          "title": "Lo\u1ea1i ph\u00f2ng",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "T\u00ean lo\u1ea1i ph\u00f2ng"
+              },
+              "price_per_night": {
+                "type": "number",
+                "title": "Gi\u00e1 / \u0111\u00eam (VND)"
+              },
+              "max_guests": {
+                "type": "number",
+                "title": "S\u1ed1 kh\u00e1ch t\u1ed1i \u0111a"
+              },
+              "breakfast": {
+                "type": "boolean",
+                "title": "Bao g\u1ed3m \u0103n s\u00e1ng"
+              }
+            }
+          }
+        },
+        "checkin": {
+          "type": "string",
+          "title": "Gi\u1edd nh\u1eadn ph\u00f2ng"
+        },
+        "checkout": {
+          "type": "string",
+          "title": "Gi\u1edd tr\u1ea3 ph\u00f2ng"
+        },
+        "cancel_policy": {
+          "type": "string",
+          "title": "Ch\u00ednh s\u00e1ch h\u1ee7y"
+        }
+      }
+    },
+    "visa": {
+      "type": "object",
+      "title": "Th\u00f4ng tin visa",
+      "properties": {
+        "country": {
+          "type": "string",
+          "title": "Qu\u1ed1c gia"
+        },
+        "visa_type": {
+          "type": "string",
+          "title": "Lo\u1ea1i visa",
+          "enum": [
+            "Du l\u1ecbch",
+            "C\u00f4ng t\u00e1c",
+            "Th\u0103m th\u00e2n"
+          ],
+          "enumColors": [
+            "green",
+            "blue",
+            "purple"
+          ]
+        },
+        "processing_time": {
+          "type": "string",
+          "title": "Th\u1eddi gian x\u1eed l\u00fd"
+        },
+        "service_fee": {
+          "type": "number",
+          "title": "Ph\u00ed d\u1ecbch v\u1ee5 (VND)"
+        },
+        "consular_fee": {
+          "type": "number",
+          "title": "Ph\u00ed l\u00e3nh s\u1ef1 (VND)"
+        },
+        "documents": {
+          "type": "array",
+          "title": "H\u1ed3 s\u01a1 c\u1ea7n chu\u1ea9n b\u1ecb",
+          "items": {
+            "type": "string"
+          }
+        },
+        "submission": {
+          "type": "string",
+          "title": "H\u00ecnh th\u1ee9c n\u1ed9p"
+        },
+        "notes": {
+          "type": "string",
+          "title": "L\u01b0u \u00fd"
+        }
+      }
+    },
+    "transport": {
+      "type": "object",
+      "title": "Th\u00f4ng tin \u0111\u01b0a \u0111\u00f3n",
+      "properties": {
+        "vehicle_type": {
+          "type": "string",
+          "title": "Lo\u1ea1i xe"
+        },
+        "seats": {
+          "type": "number",
+          "title": "S\u1ed1 ch\u1ed7"
+        },
+        "route_area": {
+          "type": "string",
+          "title": "Qu\u00e3ng \u0111\u01b0\u1eddng / khu v\u1ef1c"
+        },
+        "price_per_leg": {
+          "type": "number",
+          "title": "Gi\u00e1 theo ch\u1eb7ng (VND)"
+        }
+      }
+    },
+    "seo_title": {
+      "type": "string",
+      "title": "SEO title"
+    },
+    "seo_description": {
+      "type": "string",
+      "title": "SEO description"
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "type"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

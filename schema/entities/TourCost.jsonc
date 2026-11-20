@@ -1,0 +1,122 @@
+{
+  "name": "TourCost",
+  "type": "object",
+  "properties": {
+    "tour_id": {
+      "type": "string",
+      "title": "M\u00e3 tour"
+    },
+    "tour_title": {
+      "type": "string",
+      "title": "T\u00ean tour"
+    },
+    "departure_id": {
+      "type": "string",
+      "title": "M\u00e3 k\u1ef3 kh\u1edfi h\u00e0nh"
+    },
+    "partner_id": {
+      "type": "string",
+      "title": "M\u00e3 \u0111\u1ed1i t\u00e1c"
+    },
+    "partner_name": {
+      "type": "string",
+      "title": "\u0110\u1ed1i t\u00e1c"
+    },
+    "category": {
+      "type": "string",
+      "title": "Lo\u1ea1i chi ph\u00ed",
+      "enum": [
+        "Kh\u00e1ch s\u1ea1n",
+        "Nh\u00e0 xe",
+        "Nh\u00e0 h\u00e0ng",
+        "H\u01b0\u1edbng d\u1eabn vi\u00ean",
+        "V\u00e9 tham quan",
+        "H\u00e3ng bay",
+        "\u0110\u01a1n v\u1ecb \u0111\u1ecba ph\u01b0\u01a1ng",
+        "Kh\u00e1c"
+      ],
+      "enumColors": [
+        "purple",
+        "blue",
+        "yellow",
+        "green",
+        "pink",
+        "blue",
+        "purple",
+        "gray"
+      ]
+    },
+    "amount": {
+      "type": "number",
+      "title": "\u0110\u01a1n gi\u00e1 (VND)"
+    },
+    "basis": {
+      "type": "string",
+      "title": "C\u00e1ch t\u00ednh",
+      "enum": [
+        "To\u00e0n tour",
+        "M\u1ed7i kh\u00e1ch"
+      ],
+      "enumColors": [
+        "blue",
+        "purple"
+      ],
+      "default": "To\u00e0n tour"
+    },
+    "quantity": {
+      "type": "number",
+      "title": "S\u1ed1 l\u01b0\u1ee3ng (\u0111\u00eam / su\u1ea5t)"
+    },
+    "status": {
+      "type": "string",
+      "title": "Tr\u1ea1ng th\u00e1i chi",
+      "enum": [
+        "Ch\u01b0a chi",
+        "\u0110\u00e3 chi"
+      ],
+      "enumColors": [
+        "yellow",
+        "green"
+      ],
+      "default": "Ch\u01b0a chi"
+    },
+    "paid_at": {
+      "type": "string",
+      "title": "Ng\u00e0y chi (YYYY-MM-DD)"
+    },
+    "receipt_file_uri": {
+      "type": "string",
+      "title": "Ch\u1ee9ng t\u1eeb"
+    },
+    "note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa"
+    }
+  },
+  "required": [
+    "tour_id",
+    "amount"
+  ],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

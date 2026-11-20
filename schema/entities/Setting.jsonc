@@ -1,0 +1,148 @@
+{
+  "name": "Setting",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "T\u00ean c\u00f4ng ty"
+    },
+    "tax_code": {
+      "type": "string",
+      "title": "M\u00e3 s\u1ed1 thu\u1ebf"
+    },
+    "logo_url": {
+      "type": "string",
+      "title": "Logo"
+    },
+    "address": {
+      "type": "string",
+      "title": "\u0110\u1ecba ch\u1ec9"
+    },
+    "hotline": {
+      "type": "string",
+      "title": "Hotline"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email li\u00ean h\u1ec7"
+    },
+    "website": {
+      "type": "string",
+      "title": "Website"
+    },
+    "bank_id": {
+      "type": "string",
+      "title": "M\u00e3 ng\u00e2n h\u00e0ng (VietQR)"
+    },
+    "bank_name": {
+      "type": "string",
+      "title": "Ng\u00e2n h\u00e0ng"
+    },
+    "account_number": {
+      "type": "string",
+      "title": "S\u1ed1 t\u00e0i kho\u1ea3n nh\u1eadn ti\u1ec1n"
+    },
+    "account_name": {
+      "type": "string",
+      "title": "Ch\u1ee7 t\u00e0i kho\u1ea3n"
+    },
+    "payment_due_days": {
+      "type": "number",
+      "title": "H\u1ea1n thanh to\u00e1n tr\u01b0\u1edbc ng\u00e0y kh\u1edfi h\u00e0nh (ng\u00e0y)",
+      "default": 7
+    },
+    "tier_loyal_min": {
+      "type": "number",
+      "title": "Ng\u01b0\u1ee1ng doanh thu h\u1ea1ng Th\u00e2n thi\u1ebft (VND)",
+      "default": 20000000
+    },
+    "tier_vip_min": {
+      "type": "number",
+      "title": "Ng\u01b0\u1ee1ng doanh thu h\u1ea1ng VIP (VND)",
+      "default": 80000000
+    },
+    "default_cancellation": {
+      "type": "array",
+      "title": "Ch\u00ednh s\u00e1ch h\u1ee7y m\u1eb7c \u0111\u1ecbnh",
+      "items": {
+        "type": "object",
+        "properties": {
+          "days_before": {
+            "type": "number",
+            "title": "H\u1ee7y tr\u01b0\u1edbc (ng\u00e0y)"
+          },
+          "fee_percent": {
+            "type": "number",
+            "title": "Ph\u00ed h\u1ee7y (%)"
+          },
+          "note": {
+            "type": "string",
+            "title": "Ghi ch\u00fa"
+          }
+        }
+      }
+    },
+    "email_subject": {
+      "type": "string",
+      "title": "Ti\u00eau \u0111\u1ec1 email x\u00e1c nh\u1eadn"
+    },
+    "email_body": {
+      "type": "string",
+      "title": "N\u1ed9i dung email x\u00e1c nh\u1eadn"
+    },
+    "hide_sample_data": {
+      "type": "boolean",
+      "title": "Ch\u1ec9 d\u00f9ng d\u1eef li\u1ec7u th\u1eadt (\u1ea9n d\u1eef li\u1ec7u m\u1eabu)",
+      "default": false
+    },
+    "demo_cutoff": {
+      "type": "string",
+      "title": "Ng\u00e0y m\u1ed1c d\u1eef li\u1ec7u m\u1eabu (YYYY-MM-DD)"
+    },
+    "service_types": {
+      "type": "array",
+      "title": "Lo\u1ea1i d\u1ecbch v\u1ee5",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "T\u00ean lo\u1ea1i"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "\u0110ang d\u00f9ng",
+            "default": true
+          }
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "title": "Ghi ch\u00fa"
+    }
+  },
+  "required": [],
+  "rls": {
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
